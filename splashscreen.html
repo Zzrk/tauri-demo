@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-center: center;
+            }
+            #box {
+                background: #ccc;
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+
+        </div>
+        <script>
+            const box = document.getElementById('box')
+
+            /**
+             * @description 共 20 条
+             * @param offset 当前偏移量
+             * @return {string} svg
+             */
+            const svg_current = (offset) => {
+                const offsets = [ 0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380 ]
+                offsets.unshift(...offsets.splice(offset))
+                return `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="#fff" stroke-width="3.5" stroke-linecap="round"
+     style="translate: none; rotate: none; scale: none; transform: rotate(45deg);">
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[0]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.625,0,0,0.625,62.5,3.375)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.375,0,0,1.375,-137.5,-3.375)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="54.75 9.5" strokeWidth="10" stroke="#fff" y2="7" x2="260" y1="10" x1="140"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[1]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.58,0,0,0.58,78,3.78)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.42,0,0,1.42,-162,-3.78)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="48.04 8.4" strokeWidth="10" stroke="#fff" y2="7" x2="251.2" y1="10" x1="148.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[2]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.545,0,0,0.545,94.5,4.095)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.455,0,0,1.455,-185.5,-4.095)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="40.11 7.1" strokeWidth="10" stroke="#fff" y2="7" x2="240.8" y1="10" x1="159.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[3]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.52,0,0,0.52,112,4.32)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.48,0,0,1.48,-208,-4.32)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="30.96 5.6" strokeWidth="10" stroke="#fff" y2="7" x2="228.8" y1="10" x1="171.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[4]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.505,0,0,0.505,130.5,4.455)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.495,0,0,1.495,-229.5,-4.455)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="20.59 3.9" strokeWidth="10" stroke="#fff" y2="7" x2="215.2" y1="10" x1="184.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[5]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.5,0,0,0.5,150,4.5)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.5,0,0,1.5,-250,-4.5)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="9 2" strokeWidth="10" stroke="#fff" y2="7" x2="200" y1="10" x1="200"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[6]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.505,0,0,0.505,168.5,4.455)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.495,0,0,1.495,-267.5,-4.455)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="20.59 3.9" strokeWidth="10" stroke="#fff" y2="7" x2="215.2" y1="10" x1="184.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[7]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.52,0,0,0.52,184,4.32)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.48,0,0,1.48,-280,-4.32)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="30.96 5.6" strokeWidth="10" stroke="#fff" y2="7" x2="228.8" y1="10" x1="171.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[8]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.545,0,0,0.545,196.5,4.095)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.455,0,0,1.455,-287.5,-4.095)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="40.11 7.1" strokeWidth="10" stroke="#fff" y2="7" x2="240.8" y1="10" x1="159.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[9]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.58,0,0,0.58,206,3.78)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.42,0,0,1.42,-290,-3.78)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="48.04 8.4" strokeWidth="10" stroke="#fff" y2="7" x2="251.2" y1="10" x1="148.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[10]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.625,0,0,0.625,212.5,3.375)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.375,0,0,1.375,-287.5,-3.375)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="54.75 9.5" strokeWidth="10" stroke="#fff" y2="7" x2="260" y1="10" x1="140"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[11]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.68,0,0,0.68,216,2.88)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.32,0,0,1.32,-280,-2.88)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="60.24 10.4" strokeWidth="10" stroke="#fff" y2="7" x2="267.2" y1="10" x1="132.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[12]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.745,0,0,0.745,216.5,2.295)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.255,0,0,1.255,-267.5,-2.295)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="64.51 11.1" strokeWidth="10" stroke="#fff" y2="7" x2="272.8" y1="10" x1="127.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[13]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.82,0,0,0.82,214,1.62)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.18,0,0,1.18,-250,-1.62)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="67.56 11.6" strokeWidth="10" stroke="#fff" y2="7" x2="276.8" y1="10" x1="123.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[14]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.905,0,0,0.905,208.5,0.855)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.095,0,0,1.095,-227.5,-0.855)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="69.39 11.9" strokeWidth="10" stroke="#fff" y2="7" x2="279.2" y1="10" x1="120.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[15]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(1,0,0,1,200,0)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1,0,0,1,-200,0)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="70 12" strokeWidth="10" stroke="#fff" y2="7" x2="280" y1="10" x1="120"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[16]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.905,0,0,0.905,10.5,0.855)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.095,0,0,1.095,-29.5,-0.855)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="69.39 11.9" strokeWidth="10" stroke="#fff" y2="7" x2="279.2" y1="10" x1="120.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[17]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.82,0,0,0.82,22,1.62)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.18,0,0,1.18,-58,-1.62)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="67.56 11.6" strokeWidth="10" stroke="#fff" y2="7" x2="276.8" y1="10" x1="123.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[18]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.745,0,0,0.745,34.5,2.295)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.255,0,0,1.255,-85.5,-2.295)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="64.51 11.1" strokeWidth="10" stroke="#fff" y2="7" x2="272.8" y1="10" x1="127.2"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+    <g data-svg-origin="0 0" transform="matrix(1,0,0,1,0,${offsets[19]})"
+       style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;">
+        <circle r="5" cy="9" cx="100" data-svg-origin="100 9" transform="matrix(0.68,0,0,0.68,48,2.88)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <circle r="5" cy="9" cx="300" data-svg-origin="300 9" transform="matrix(1.32,0,0,1.32,-112,-2.88)"
+                style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></circle>
+        <line stroke-dasharray="60.24 10.4" strokeWidth="10" stroke="#fff" y2="7" x2="267.2" y1="10" x1="132.8"
+              data-svg-origin="200 8.5" transform="matrix(1,0,0,1,0,0)"
+              style="translate: none; rotate: none; scale: none; transform-origin: 0px 0px;"></line>
+    </g>
+</svg>`
+            }
+
+            let t = 0
+            setInterval(() => {
+                box.innerHTML = svg_current(t % 20)
+                t += 1
+            }, 50)
+        </script>
+    </body>
+</html>
