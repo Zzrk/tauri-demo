@@ -3,13 +3,22 @@
 
 mod command;
 mod menu;
+mod window;
 
 fn main() {
   tauri::Builder::default()
+    // .setup(|app| {
+    //   // 创建外部链接的窗口
+    //   window::create_external_window_in_setup(app);
+    //   Ok(())
+    // })
     .menu(menu::init_menu())
     .on_menu_event(menu::handle_menu_event)
     .manage(command::Database {})
-    .invoke_handler(tauri::generate_handler![command::my_custom_command])
+    .invoke_handler(tauri::generate_handler![
+      command::my_custom_command,
+      window::open_external_window,
+    ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }

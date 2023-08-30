@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Command from "./components/Command.vue";
+import Window from "./components/Window.vue";
 </script>
 
 <template>
@@ -36,6 +37,7 @@ import Command from "./components/Command.vue";
     </p>
 
     <Command />
+    <Window />
   </div>
 </template>
 
