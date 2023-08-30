@@ -1,5 +1,3 @@
-
-
 // 主进程状态结构体
 pub struct Database;
 
