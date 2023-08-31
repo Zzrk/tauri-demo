@@ -4,6 +4,7 @@
 mod command;
 mod menu;
 mod window;
+mod tray;
 
 use tauri::Manager;
 
@@ -25,6 +26,8 @@ fn main() {
       // window::create_external_window_in_setup(app);
       Ok(())
     })
+    .system_tray(tray::init_tray())
+    .on_system_tray_event(tray::handle_tray_event)
     .menu(menu::init_menu())
     .on_menu_event(menu::handle_menu_event)
     .manage(command::Database {})
@@ -32,6 +35,21 @@ fn main() {
       command::my_custom_command,
       window::open_external_window,
     ])
-    .run(tauri::generate_context!())
-    .expect("error while running tauri application");
+    .on_window_event(|event| match event.event() {
+      // Keep the Frontend Running in the Background
+      tauri::WindowEvent::CloseRequested { api, .. } => {
+        event.window().hide().unwrap();
+        api.prevent_close();
+      }
+      _ => {}
+    })
+    .build(tauri::generate_context!())
+    .expect("error while running tauri application")
+    .run(|_app_handle, event| match event {
+      // Keep the Backend Running in the Background
+      tauri::RunEvent::ExitRequested { api, .. } => {
+        api.prevent_exit();
+      }
+      _ => {}
+    });
 }

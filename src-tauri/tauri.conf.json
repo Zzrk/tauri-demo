@@ -50,6 +50,10 @@
         "url": "splashscreen.html",
         "label": "splashscreen"
       }
-    ]
+    ],
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    }
   }
 }
